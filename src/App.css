@@ -1,0 +1,17 @@
+button {
+  text-transform: capitalize;
+  margin-left: 13px;
+  border-radius: 7px;
+  background-color: white;
+  transition: 0.2s;
+  border: 2px solid darkgray;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 255, 0.123);
+}
+button:active {
+  background-color: rgba(0, 0, 255, 0.349);
+}
