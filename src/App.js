@@ -1,5 +1,5 @@
 import './App.css'
-import { Component, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Statistics } from './components/Statistics.js'
 import { FeedbackOptions } from './components/FeedbackOptions.js'
 import { Section } from './components/Section.js'
@@ -10,20 +10,16 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
 
-  const handleGoodIncrement = () => setGood((good) => good + 1)
-  const handleNeutralIncrement = () => setNeutral((neutral) => neutral + 1)
-  const handleBadIncrement = () => setBad((bad) => bad + 1)
-
   const handleIncrement = (name) => {
     switch (name) {
       case 'good':
-        handleGoodIncrement()
+        setGood((good) => good + 1)
         break
       case 'neutral':
-        handleNeutralIncrement()
+        setNeutral((neutral) => neutral + 1)
         break
       case 'bad':
-        handleBadIncrement()
+        setBad((bad) => bad + 1)
         break
     }
   }
